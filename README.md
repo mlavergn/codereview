@@ -64,3 +64,6 @@ xcrun clang-format -i MyProject/**/*.[hm]
 
 - Style guides based on Apple documentation and sample code
   - https://google.github.io/swift/
+
+- Apple sample code:
+  - https://developer.apple.com/documentation/swiftui/backyard-birds-sample
