@@ -9,6 +9,10 @@ Code Review Tools, Configurations, and Recommendations
 - SwiftLint
   - https://github.com/realm/SwiftLint
   - Configuration: `.swiftlint.yml`
+     - Setup options:
+      - `ln -s swiftlint.yml .swiftlint.yml`
+      - `mv swiftlint.yml .swiftlint.yml`
+
 ```bash
 swiftlint --config .swiftlint.yml
 ```
@@ -18,6 +22,10 @@ swiftlint --config .swiftlint.yml
 - oclint
   - https://github.com/oclint/oclinttl
   - Configuration: `.oclint`
+     - Setup options:
+      - `ln -s oclint.yml .oclint`
+      - `mv oclint.yml .oclint`
+
 ```bash
 xcodebuild -project MyProject.xcodeproj -scheme MyScheme -sdk macosx -configuration Debug build | xcpretty -r json-compilation-database -o compile_commands.json
 oclint-json-compilation-database
@@ -35,8 +43,12 @@ oclint -rc CYCLOMATIC_COMPLEXITY=10 -rc LONG_CLASS=1000
     - Strips all custom formatting
     - Can modify output formatting via configuration
   - Configuration: `.swift-format.json`
+     - Setup options:
+      - `ln -s swift-format.json .swift-format.json`
+      - `mv swift-format.json .swift-format.json`
+
 ```bash
-swiftformat MyProject/**/*.swift
+swiftformat **/*.swift
 ```
 
 - SwiftFormat
@@ -45,9 +57,14 @@ swiftformat MyProject/**/*.swift
     - Text parser
     - Operates on line groups
     - Can ignore some text via configuration
-  - Configuration: `.swiftformat` https://github.com/nicklockwood/SwiftFormat/blob/main/Rules.md
+  - Configuration: `.swiftformat` 
+    - https://github.com/nicklockwood/SwiftFormat/blob/main/Rules.md
+    - Setup options:
+      - `ln -s swiftformat.cfg .swiftformat`
+      - `mv swiftformat.cfg .swiftformat`
+
 ```bash
-swiftformat MyProject/**/*.swift
+swiftformat **/*.swift
 ```
 
 ### Objective-C
@@ -56,8 +73,12 @@ swiftformat MyProject/**/*.swift
   - https://clang.llvm.org/docs/ClangFormatStyleOptions.html
   - Standard with Xcode
   - Configuration: `.clang-format`
-```
-xcrun clang-format -i MyProject/**/*.[hm]
+    - Setup options:
+      - `ln -s clang-format.yml .clang-format`
+      - `mv clang-format.yml .clang-format`
+
+```bash
+xcrun clang-format -i **/*.[hm]
 ```
 
 ## Style Guides

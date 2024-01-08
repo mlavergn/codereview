@@ -1,5 +1,5 @@
 included:
-  - MyProject/**/*.swift
+  - **/*.swift
 
 trailing_whitespace:
   ignores_empty_lines: true
